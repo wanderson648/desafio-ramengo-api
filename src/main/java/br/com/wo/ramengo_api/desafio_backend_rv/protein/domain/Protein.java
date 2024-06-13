@@ -1,5 +1,6 @@
 package br.com.wo.ramengo_api.desafio_backend_rv.protein.domain;
 
+import br.com.wo.ramengo_api.desafio_backend_rv.protein.application.api.ProteinRequest;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -15,8 +16,9 @@ import java.math.BigDecimal;
 
 @Getter
 @Setter
-@NoArgsConstructor
+@AllArgsConstructor
 @Entity
+@NoArgsConstructor
 public class Protein {
 
     @Id
@@ -29,4 +31,9 @@ public class Protein {
     @NotNull
     private BigDecimal price;
 
+    public Protein(ProteinRequest proteinRequest) {
+        this.name = proteinRequest.name();
+        this.description = proteinRequest.description();
+        this.price = proteinRequest.price();
+    }
 }
