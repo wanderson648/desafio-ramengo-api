@@ -22,9 +22,9 @@ public class Order {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @JoinColumn(name = "broth_id")
+    @Column(name = "broth_id")
     private Integer brothId;
-    @JoinColumn(name = "protein_id")
+    @Column(name = "protein_id")
     private Integer proteinId;
 
     @Column(name = "order_code")
