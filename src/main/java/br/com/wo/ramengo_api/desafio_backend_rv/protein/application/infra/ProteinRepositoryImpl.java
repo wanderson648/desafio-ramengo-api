@@ -1,7 +1,6 @@
 package br.com.wo.ramengo_api.desafio_backend_rv.protein.application.infra;
 
 import br.com.wo.ramengo_api.desafio_backend_rv.protein.application.repository.ProteinRepository;
-import br.com.wo.ramengo_api.desafio_backend_rv.protein.application.service.ProteinServiceImpl;
 import br.com.wo.ramengo_api.desafio_backend_rv.protein.domain.Protein;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
