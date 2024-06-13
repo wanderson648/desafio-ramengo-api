@@ -5,7 +5,7 @@ import jakarta.validation.constraints.NotNull;
 
 import java.math.BigDecimal;
 
-record ProteinRequest(
+public record ProteinRequest(
         @NotBlank String name,
         @NotBlank String description,
         @NotNull BigDecimal price) {
