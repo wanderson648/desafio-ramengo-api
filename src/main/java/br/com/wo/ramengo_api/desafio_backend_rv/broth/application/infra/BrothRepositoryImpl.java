@@ -30,4 +30,5 @@ public class BrothRepositoryImpl implements BrothRepository {
         logger.info("[finished] BrothRepositoryImpl - listAll");
         return brothSpringJpaRepository.findAll();
     }
+
 }

@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 @Tag(name = "Order", description = "Order information")
 public interface OrderAPI {
 
-    @PostMapping
+    @PostMapping("")
     @Operation(summary = "Place an Order",
             description = "Place an order")
     @ResponseStatus(code = HttpStatus.CREATED)
