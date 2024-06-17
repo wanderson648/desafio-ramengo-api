@@ -54,6 +54,6 @@ cd desafio-backend-rv
 
 Feito isso, abra o terminal na pasta do projeto e digite o comando para rodar a aplicação
 ```
-docker run -p 8080:8080 spring-boot-ramenfo:1.1
+docker run -p 8080:8080 spring-boot-ramengo:1.1
 ```
 A aplicação rodando, estará disponível em http://localhost:8080
