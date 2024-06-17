@@ -14,17 +14,17 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/v1/broths")
-@Tag(name = "Broth", description = "Broth information")
+@Tag(name = "Broth", description = "")
 public interface BrothAPI {
 
-    @PostMapping
-    @Operation(summary = "Broth creation",
-            description = "This role is responsible for creating candidate")
-    BrothResponse createBroth(@Valid @RequestBody BrothRequest brothRequest);
+//    @PostMapping
+//    @Operation(summary = "Broth creation",
+//            description = "This role is responsible for creating candidate")
+//    BrothResponse createBroth(@Valid @RequestBody BrothRequest brothRequest);
 
     @GetMapping
-    @Operation(summary = "List of broths",
-            description = "Gets the list of all broths")
+    @Operation(summary = "List all available broths",
+            description = "A list of broths")
     @ResponseStatus(code = HttpStatus.OK)
     List<BrothListResponse> listAllBroths();
 }

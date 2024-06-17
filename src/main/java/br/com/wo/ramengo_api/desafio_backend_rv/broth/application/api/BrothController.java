@@ -17,12 +17,12 @@ public class BrothController implements BrothAPI {
 
     private final BrothService brothService;
 
-    @Override
-    public BrothResponse createBroth(BrothRequest brothRequest) {
-        logger.info("[start] BrothController - createBroth");
-        logger.info("[finished] BrothController - createBroth");
-        return brothService.createBroth(brothRequest);
-    }
+//    @Override
+//    public BrothResponse createBroth(BrothRequest brothRequest) {
+//        logger.info("[start] BrothController - createBroth");
+//        logger.info("[finished] BrothController - createBroth");
+//        return brothService.createBroth(brothRequest);
+//    }
 
     @Override
     public List<BrothListResponse> listAllBroths() {

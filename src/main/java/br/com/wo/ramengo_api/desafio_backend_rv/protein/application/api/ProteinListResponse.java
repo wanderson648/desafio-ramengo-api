@@ -7,10 +7,10 @@ import java.math.BigDecimal;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public record ProteinListResponse(Integer id, String name, String description, BigDecimal price) {
+public record ProteinListResponse(Integer id, String imageInactive, String imageActive,String name, String description, BigDecimal price) {
 
     public ProteinListResponse(Protein protein) {
-        this(protein.getId(), protein.getName(), protein.getDescription(), protein.getPrice());
+        this(protein.getId(), protein.getImageInactive(), protein.getImageActive(), protein.getName(), protein.getDescription(), protein.getPrice());
     }
 
     public static List<ProteinListResponse> convert(List<Protein> proteins) {

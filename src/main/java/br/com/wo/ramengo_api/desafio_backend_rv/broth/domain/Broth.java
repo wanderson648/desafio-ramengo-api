@@ -25,6 +25,10 @@ public class Broth {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     @NotBlank
+    private String imageInactive;
+    @NotBlank
+    private String imageActive;
+    @NotBlank
     private String name;
     @NotBlank
     private String description;
@@ -32,6 +36,8 @@ public class Broth {
     private BigDecimal price;
 
     public Broth(BrothRequest brothRequest) {
+        this.imageInactive = brothRequest.imageInactive();
+        this.imageActive = brothRequest.imageActive();
         this.name = brothRequest.name();
         this.description = brothRequest.description();
         this.price = brothRequest.price();

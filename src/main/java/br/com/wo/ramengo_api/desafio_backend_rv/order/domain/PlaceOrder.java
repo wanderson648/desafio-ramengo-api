@@ -1,6 +1,8 @@
 package br.com.wo.ramengo_api.desafio_backend_rv.order.domain;
 
+import br.com.wo.ramengo_api.desafio_backend_rv.broth.domain.Broth;
 import br.com.wo.ramengo_api.desafio_backend_rv.order.application.api.OrderRequest;
+import br.com.wo.ramengo_api.desafio_backend_rv.protein.domain.Protein;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -16,25 +18,25 @@ public class PlaceOrder {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Long id;
 
-    @Column(name = "broth_id")
+    @ManyToOne
+    @JoinColumn(name = "broth_id", insertable = false, updatable = false)
+    private Broth broth;
+
+    @ManyToOne
+    @JoinColumn(name = "protein_id", insertable = false, updatable = false)
+    private Protein protein;
+
+    @Column(name = "broth_id", nullable = false)
     private Integer brothId;
 
-    @Column(name = "protein_id")
+    @Column(name = "protein_id", nullable = false)
     private Integer proteinId;
-
-    @Column(name = "order_id")
-    private String orderId;
 
     public PlaceOrder(OrderRequest orderRequest) {
         this.brothId = orderRequest.brothId();
         this.proteinId = orderRequest.proteinId();
     }
 
-    public String generatedCode() {
-        long code = (long) Math.floor(Math.random() * 100000);
-        this.orderId = String.valueOf(code);
-        return orderId;
-    }
 }

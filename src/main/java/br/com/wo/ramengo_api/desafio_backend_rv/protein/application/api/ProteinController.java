@@ -14,12 +14,12 @@ public class ProteinController implements ProteinAPI {
     private final Logger logger = LoggerFactory.getLogger(ProteinController.class);
 
     private final ProteinService proteinService;
-    @Override
-    public ProteinResponse createProtein(ProteinRequest proteinRequest) {
-        logger.info("[start] ProteinController - createProtein");
-        logger.info("[finished] ProteinController - createProtein");
-        return proteinService.createProtein(proteinRequest);
-    }
+//    @Override
+//    public ProteinResponse createProtein(ProteinRequest proteinRequest) {
+//        logger.info("[start] ProteinController - createProtein");
+//        logger.info("[finished] ProteinController - createProtein");
+//        return proteinService.createProtein(proteinRequest);
+//    }
 
     @Override
     public List<ProteinListResponse> listAllProtein() {

@@ -8,5 +8,9 @@ import java.math.BigDecimal;
 public record ProteinRequest(
         @NotBlank String name,
         @NotBlank String description,
+        @NotBlank
+        String imageInactive,
+        @NotBlank
+        String imageActive,
         @NotNull BigDecimal price) {
 }

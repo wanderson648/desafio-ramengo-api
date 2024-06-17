@@ -25,6 +25,10 @@ public class Protein {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     @NotBlank
+    private String imageInactive;
+    @NotBlank
+    private String imageActive;
+    @NotBlank
     private String name;
     @NotBlank
     private String description;
@@ -32,6 +36,8 @@ public class Protein {
     private BigDecimal price;
 
     public Protein(ProteinRequest proteinRequest) {
+        this.imageInactive = proteinRequest.imageInactive();
+        this.imageActive = proteinRequest.imageActive();
         this.name = proteinRequest.name();
         this.description = proteinRequest.description();
         this.price = proteinRequest.price();

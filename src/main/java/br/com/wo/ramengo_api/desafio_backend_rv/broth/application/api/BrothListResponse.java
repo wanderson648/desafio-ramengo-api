@@ -6,9 +6,9 @@ import java.math.BigDecimal;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public record BrothListResponse(Integer id, String name, String description, BigDecimal price) {
+public record BrothListResponse(Integer id, String imageInactive, String imageActive, String name, String description, BigDecimal price) {
     public BrothListResponse(Broth broth) {
-        this(broth.getId(), broth.getName(), broth.getDescription(), broth.getPrice());
+        this(broth.getId(), broth.getImageInactive(), broth.getImageActive(), broth.getName(), broth.getDescription(), broth.getPrice());
     }
 
     public static List<BrothListResponse> convert(List<Broth> broths) {

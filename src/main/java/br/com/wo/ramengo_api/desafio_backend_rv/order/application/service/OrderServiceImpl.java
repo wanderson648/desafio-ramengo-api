@@ -21,7 +21,7 @@ public class OrderServiceImpl implements OrderService {
         PlaceOrder order = orderRepository.save(new PlaceOrder(orderRequest));
         logger.info("[finished] OrderServiceImpl -placeAnOrder");
         return OrderResponse.builder()
-                .orderId(order.generatedCode())
+                .orderId(order.getId())
                 .build();
     }
 }
