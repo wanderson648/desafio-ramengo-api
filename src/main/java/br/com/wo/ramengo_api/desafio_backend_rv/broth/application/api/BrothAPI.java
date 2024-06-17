@@ -26,5 +26,5 @@ public interface BrothAPI {
     @Operation(summary = "List all available broths",
             description = "A list of broths")
     @ResponseStatus(code = HttpStatus.OK)
-    List<BrothListResponse> listAllBroths();
+    List<BrothListResponse> listAllBroths(@RequestHeader("x-api-key") String apiKey);
 }

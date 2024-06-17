@@ -23,5 +23,5 @@ public interface ProteinAPI {
     @ResponseStatus(code = HttpStatus.OK)
     @Operation(summary = "List all available proteins",
             description = "A list of proteins")
-    List<ProteinListResponse> listAllProtein();
+    List<ProteinListResponse> listAllProtein(@RequestHeader("x-api-key") String apiKey);
 }

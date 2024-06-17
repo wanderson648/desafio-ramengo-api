@@ -25,9 +25,9 @@ public class BrothController implements BrothAPI {
 //    }
 
     @Override
-    public List<BrothListResponse> listAllBroths() {
+    public List<BrothListResponse> listAllBroths(String apiKey) {
         logger.info("[start] BrothController - listAllBroths");
-        List<BrothListResponse> broths = brothService.listAllBroths();
+        List<BrothListResponse> broths = brothService.listAllBroths(apiKey);
         logger.info("[finished] BrothController - listAllBroths");
         return broths;
     }

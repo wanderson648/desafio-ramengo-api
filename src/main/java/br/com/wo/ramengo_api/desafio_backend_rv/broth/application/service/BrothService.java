@@ -8,5 +8,5 @@ import java.util.List;
 
 public interface BrothService {
     BrothResponse createBroth(BrothRequest brothRequest);
-    List<BrothListResponse> listAllBroths();
+    List<BrothListResponse> listAllBroths(String apiKey);
 }

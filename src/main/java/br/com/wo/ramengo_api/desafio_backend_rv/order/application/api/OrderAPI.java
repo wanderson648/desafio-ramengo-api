@@ -15,5 +15,5 @@ public interface OrderAPI {
     @Operation(summary = "Place an Order",
             description = "Place an order")
     @ResponseStatus(code = HttpStatus.CREATED)
-    OrderResponse placeAnOrder(@Valid @RequestBody OrderRequest orderRequest);
+    OrderResponse placeAnOrder(@RequestHeader("x-api-key") String apiKey, @Valid @RequestBody OrderRequest orderRequest);
 }

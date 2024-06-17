@@ -22,9 +22,9 @@ public class ProteinController implements ProteinAPI {
 //    }
 
     @Override
-    public List<ProteinListResponse> listAllProtein() {
+    public List<ProteinListResponse> listAllProtein(String apiKey) {
         logger.info("[start] ProteinController - listAllProtein");
-        List<ProteinListResponse> proteins = proteinService.listAllProteins();
+        List<ProteinListResponse> proteins = proteinService.listAllProteins(apiKey);
         logger.info("[finished] ProteinController - listAllProtein");
         return proteins;
     }

@@ -30,9 +30,9 @@ public class ProteinServiceImpl implements ProteinService {
     }
 
     @Override
-    public List<ProteinListResponse> listAllProteins() {
+    public List<ProteinListResponse> listAllProteins(String apiKey) {
         logger.info("[start] ProteinServiceImpl - listAllProteins");
-        List<Protein> proteins = proteinRepository.listAll();
+        List<Protein> proteins = proteinRepository.listAll(apiKey);
         logger.info("[start] ProteinServiceImpl - listAllProteins");
         return ProteinListResponse.convert(proteins);
     }

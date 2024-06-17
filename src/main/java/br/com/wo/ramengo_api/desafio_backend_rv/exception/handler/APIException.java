@@ -28,6 +28,13 @@ public class APIException extends RuntimeException {
                 .map(APIException::getMessageCause).orElse(null);
     }
 
+    public static APIException build(HttpStatus statusException, String message) {
+        return new APIException(statusException, message, null);
+    }
+
+    public static APIException build(HttpStatus statusException, String message, Exception e) {
+        return new APIException(statusException, message, e);
+    }
     private static String getMessageCause(Exception e) {
         return e.getCause() != null ? e.getCause().getMessage() : e.getMessage();
     }
@@ -39,5 +46,5 @@ public class APIException extends RuntimeException {
     }
 
     @Serial
-    private static final long serialVersionUID = 5188254319182121395L;
+    private static final long serialVersionUID = 1L;
 }

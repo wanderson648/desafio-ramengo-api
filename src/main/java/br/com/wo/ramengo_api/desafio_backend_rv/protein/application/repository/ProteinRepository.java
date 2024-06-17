@@ -6,5 +6,5 @@ import java.util.List;
 
 public interface ProteinRepository {
     Protein save(Protein protein);
-    List<Protein> listAll();
+    List<Protein> listAll(String apiKey);
 }

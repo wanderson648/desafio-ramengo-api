@@ -6,5 +6,5 @@ import java.util.List;
 
 public interface BrothRepository {
     Broth save(Broth broth);
-    List<Broth> listAll();
+    List<Broth> listAll(String apiKey);
 }

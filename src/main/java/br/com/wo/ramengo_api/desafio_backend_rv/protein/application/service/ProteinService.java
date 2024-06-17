@@ -8,5 +8,5 @@ import java.util.List;
 
 public interface ProteinService {
     ProteinResponse createProtein(ProteinRequest proteinRequest);
-    List<ProteinListResponse> listAllProteins();
+    List<ProteinListResponse> listAllProteins(String apiKey);
 }
